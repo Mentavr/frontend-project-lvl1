@@ -1,2 +1,3 @@
 #!/usr/bin/env node 
-console.log('hellow')
+import {name} from '../src/cli.js';
+console.log(`Hello, ${name}!`);
