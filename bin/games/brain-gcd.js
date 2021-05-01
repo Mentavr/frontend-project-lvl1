@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import randomNum from '../src/randomNum.js';
-import intersection from '../src/intersectionNum.js';
-import divisors from '../src/divisors.js';
+import randomNum from '../../src/randomNum.js';
+import intersection from '../../src/intersectionNum.js';
+import divisors from '../../src/divisors.js';
 
 const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 

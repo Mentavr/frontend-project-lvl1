@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import findeNum from '../src/findeNum.js';
-import progressRanNum from '../src/progressRanNum.js';
-import progressLogic from '../src/progressLogic.js';
+import findeNum from '../../src/findeNum.js';
+import progressRanNum from '../../src/progressRanNum.js';
+import progressLogic from '../../src/progressLogic.js';
 
 const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 

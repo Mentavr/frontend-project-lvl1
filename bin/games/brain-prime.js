@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import simpleNum from '../src/simpleNum.js';
-import randomNum from '../src/randomNum.js';
+import simpleNum from '../../src/simpleNum.js';
+import randomNum from '../../src/randomNum.js';
 
 const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 
