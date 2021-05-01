@@ -15,7 +15,7 @@ while (i < 4) {
   const randomComputationSign = sign[computationSign];
   const ranNum1 = randomNum(0, 10);
   const ranNum2 = randomNum(0, 10);
-  console.log(`Question: ${ranNum1 + randomComputationSign + ranNum2}`);
+  console.log(`Question: ${ranNum1} ${randomComputationSign} ${ranNum2}`);
   const sumRanNum = mathemOperations(randomComputationSign, ranNum1, ranNum2);
   const answerQues = readlineSync.question('Your answer? ');
   if (Number(answerQues) !== sumRanNum) {
