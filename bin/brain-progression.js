@@ -13,7 +13,7 @@ let i = 1;
 while (i < 4) {
   const progression = progressRanNum(progressLogic());
   console.log(`Question: ${progression}`);
-  const answerQues = readlineSync.question('Your answer? ');
+  const answerQues = readlineSync.question('Your answer: ');
   if (Number(answerQues) !== findeNum(progression)) {
     console.log(`"${answerQues}" is wrong answer ;(. Correct answer was "${findeNum(progression)}"\nLet's try again, ${name}!`);
     break;

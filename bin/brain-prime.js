@@ -12,7 +12,7 @@ let i = 1;
 while (i < 4) {
   const num = randomNum(1, 100);
   console.log(`Question: ${num}`);
-  const answerQues = readlineSync.question('Your answer? ');
+  const answerQues = readlineSync.question('Your answer: ');
   if (answerQues !== simpleNum(num)) {
     console.log(`"${answerQues}" is wrong answer ;(. Correct answer was "${simpleNum(num)}"\nLet's try again, ${name}!`);
     break;

@@ -18,7 +18,7 @@ while (i < 4) {
   const arrNum2 = divisors(ranNum2);
   const intersectionNum = intersection(arrNum1, arrNum2);
   console.log(`Question: ${ranNum1} ${ranNum2}`);
-  const answerQues = readlineSync.question('Your answer? ');
+  const answerQues = readlineSync.question('Your answer: ');
   if (intersectionNum !== Number(answerQues)) {
     console.log(`"${answerQues}" is wrong answer ;(. Correct answer was "${intersectionNum}"\nLet's try again, ${name}!`);
     break;

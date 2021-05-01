@@ -11,7 +11,7 @@ let i = 1;
 while (i < 4) {
   const ranNum = randomNum(1, 1000);
   console.log(`Question: ${ranNum}`);
-  const answerQues = readlineSync.question('Your answer? ', {
+  const answerQues = readlineSync.question('Your answer: ', {
     trueValue: ['yes'],
     falseValue: ['no'],
   });
