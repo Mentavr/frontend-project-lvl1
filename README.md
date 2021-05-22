@@ -1,6 +1,8 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Mentavr/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Mentavr/frontend-project-lvl1/actions)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability""><img src="https://codeclimate.com/github/Mentavr/frontend-project-lvl1" /></a>
+[![Actions Status](https://github.com/Mentavr/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Mentavr/frontend-project-lvl1/actions)]
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/c16608ccd6e851edc588/maintainability)](https://codeclimate.com/github/Mentavr/frontend-project-lvl1/maintainability)
+
 ![example workflow](https://github.com/Mentavr/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
 ### How to install?
@@ -16,7 +18,7 @@
 - Prime number: brain-prime
 
 ### Asciinema:
-[![Actions Status](https://github.com/Mentavr/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://asciinema.org/~Vulver)
+[![Actions Status]](https://asciinema.org/~Vulver)
 
 #### brain-calc:
 ##### game-ower
