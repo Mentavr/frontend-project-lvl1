@@ -1,15 +1,22 @@
 import platform from '../index.js';
 import helpers from '../helpers.js';
 
-const logic = () => {
-  const ranNum = helpers.randomNum(1, 100);
+const checkParity = (num) => {
+  if (num % 2 !== 0) {
+    return 'no';
+  }
+  return 'yes';
+};
+
+const generateRound = () => {
+  const ranNum = helpers.createNum(1, 100);
 
   const qustion = `${ranNum}`;
-  const res = helpers.even(ranNum);
+  const res = checkParity(ranNum);
   return [qustion, res];
 };
-const task = 'Answer "yes" if the number is even, otherwise answer "no"';
+const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
-const engine = { task, logic };
+const engine = { description, generateRound };
 const startGame = () => platform(engine);
 export default startGame;

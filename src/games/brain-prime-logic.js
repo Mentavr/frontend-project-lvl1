@@ -1,15 +1,24 @@
 import platform from '../index.js';
 import helpers from '../helpers.js';
 
-const logic = () => {
-  const ranNum = helpers.randomNum(1, 100);
+const isSimpleNum = (num) => {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+  return 'yes';
+};
 
-  const qustion = `${ranNum}`;
-  const res = helpers.simpleNum(ranNum);
+const generateRound = () => {
+  const num = helpers.createNum(1, 100);
+
+  const qustion = `${num}`;
+  const res = isSimpleNum(num);
   return [qustion, res];
 };
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const engine = { task, logic };
+const engine = { description, generateRound };
 const startGame = () => platform(engine);
 export default startGame;
