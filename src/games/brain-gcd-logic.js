@@ -22,8 +22,8 @@ const finedIntersectionArr = (arr1, arr2) => {
 };
 
 const generateRound = () => {
-  const num1 = helpers.createNum(0, 100);
-  const num2 = helpers.createNum(0, 100);
+  const num1 = helpers.createNum(1, 100);
+  const num2 = helpers.createNum(1, 100);
   const arrdivisors1 = finedDivisorsNumber(num1);
   const arrdivisors2 = finedDivisorsNumber(num2);
   const intersectionNumbers = finedIntersectionArr(arrdivisors1, arrdivisors2);
