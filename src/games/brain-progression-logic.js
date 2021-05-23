@@ -40,7 +40,7 @@ const serchProgressionNum = (str) => {
 };
 
 const generateRound = () => {
-  const progression = insertDottedProgression(createProgressionLogic);
+  const progression = insertDottedProgression(createProgressionLogic());
 
   const qustion = `${progression}`;
   const res = serchProgressionNum(progression);
