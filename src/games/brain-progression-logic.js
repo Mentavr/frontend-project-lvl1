@@ -3,9 +3,9 @@ import helpers from '../helpers.js';
 
 const createProgressionLogic = () => {
   const arrNumProgress = [];
-  const stepProgress = helpers.createNum(2, 6);
-  const firstNum = helpers.createNum(1, 100);
-  const lengthProgress = helpers.createNum(6, 10);
+  const stepProgress = helpers.generateRandomNumber(2, 6);
+  const firstNum = helpers.generateRandomNumber(1, 100);
+  const lengthProgress = helpers.generateRandomNumber(6, 10);
   for (let i = firstNum, j = 0; j < lengthProgress; i += stepProgress, j += 1) {
     arrNumProgress.push(i);
   }
@@ -13,7 +13,7 @@ const createProgressionLogic = () => {
 };
 
 const insertDottedProgression = (arr) => {
-  const randNumCount = helpers.createNum(0, arr.length - 1);
+  const randNumCount = helpers.generateRandomNumber(0, arr.length - 1);
   const dotter = '..';
   const newArr = arr;
   newArr[randNumCount] = dotter;
@@ -42,8 +42,8 @@ const serchProgressionNum = (str) => {
 const generateRound = () => {
   const progression = insertDottedProgression(createProgressionLogic());
 
-  const qustion = `${progression}`;
-  const res = serchProgressionNum(progression);
+  const qustion = String(progression);
+  const res = String(serchProgressionNum(progression));
   return [qustion, res];
 };
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

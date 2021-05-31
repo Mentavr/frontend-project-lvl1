@@ -7,7 +7,7 @@
 
 ### How to install?
 1. Clone this repositori
-2. Instal dependencies(Makefile)
+2. Instal dependencies(Makefile: "make install")
 3. Run games
 
 ### Comand for run game

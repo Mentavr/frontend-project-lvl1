@@ -11,10 +11,10 @@ const isSimpleNum = (num) => {
 };
 
 const generateRound = () => {
-  const num = helpers.createNum(1, 100);
+  const num = helpers.generateRandomNumber(1, 100);
 
-  const qustion = `${num}`;
-  const res = isSimpleNum(num);
+  const qustion = String(num);
+  const res = String(isSimpleNum(num));
   return [qustion, res];
 };
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

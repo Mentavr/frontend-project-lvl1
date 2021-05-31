@@ -9,10 +9,10 @@ const checkParity = (num) => {
 };
 
 const generateRound = () => {
-  const ranNum = helpers.createNum(1, 100);
+  const ranNum = helpers.generateRandomNumber(1, 100);
 
   const qustion = `${ranNum}`;
-  const res = checkParity(ranNum);
+  const res = String(checkParity(ranNum));
   return [qustion, res];
 };
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
