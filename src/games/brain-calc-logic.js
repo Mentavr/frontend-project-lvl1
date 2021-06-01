@@ -5,7 +5,7 @@ const generateRound = () => {
   const createOperations = () => {
     const startingPosition = 0;
     const operations = ['+', '-', '*'];
-    const operationIndex = helpers.generateRandomNumber(startingPosition, operations.length);
+    const operationIndex = helpers.generateRandomNumber(startingPosition, operations.length - 1);
     const operation = operations[operationIndex];
     return operation;
   };
@@ -28,7 +28,7 @@ const generateRound = () => {
   const sign = createOperations();
 
   const qustion = `${num1} ${sign} ${num2}`;
-  const answer = String(checkMathemOperations(sign, num1, num2));
+  const answer = String(checkMathemOperations(num1, sign, num2));
   return [qustion, answer];
 };
 
