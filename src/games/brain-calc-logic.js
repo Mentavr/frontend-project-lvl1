@@ -10,7 +10,7 @@ const generateRound = () => {
     return operation;
   };
 
-  const checkMathemOperations = (operation, num1, num2) => {
+  const checkMathemOperations = (num1, operation, num2) => {
     switch (operation) {
       case '-':
         return num1 - num2;
