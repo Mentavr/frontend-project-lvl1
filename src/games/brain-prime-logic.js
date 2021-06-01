@@ -1,24 +1,20 @@
-import platform from '../index.js';
+import startGame from '../index.js';
 import helpers from '../helpers.js';
 
-const isSimpleNum = (num) => {
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) {
-      return 'no';
+const checksSimpleNum = (number) => {
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return;
     }
   }
-  return 'yes';
 };
-
 const generateRound = () => {
   const num = helpers.generateRandomNumber(1, 100);
-
+  const isSimpleNum = (checksSimpleNum(num) ? 'no' : 'yes');
   const qustion = String(num);
-  const res = String(isSimpleNum(num));
-  return [qustion, res];
+  const answer = String(isSimpleNum);
+  return [qustion, answer];
 };
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const engine = { description, generateRound };
-const startGame = () => platform(engine);
-export default startGame;
+export default () => startGame({ description, generateRound });

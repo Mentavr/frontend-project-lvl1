@@ -1,4 +1,4 @@
-import platform from '../index.js';
+import startGame from '../index.js';
 import helpers from '../helpers.js';
 
 const finedDivisorsNumber = (num) => {
@@ -11,28 +11,28 @@ const finedDivisorsNumber = (num) => {
   return arrDivisors;
 };
 
-// eslint-disable-next-line consistent-return
-const finedIntersectionArr = (arr1, arr2) => {
-  for (let i = arr1.length - 1; i >= 0; i -= 1) {
-    const j = arr2.indexOf(arr1[i]);
-    if (arr1[i] === arr2[j]) {
-      return arr2[j];
+const gcd = (num1, num2) => {
+  const arrdivisors1 = finedDivisorsNumber(num1);
+  const arrdivisors2 = finedDivisorsNumber(num2);
+  let result;
+  for (let i = arrdivisors1.length - 1; i >= 0; i -= 1) {
+    const j = arrdivisors2.indexOf(arrdivisors1[i]);
+    if (arrdivisors1[i] === arrdivisors2[j]) {
+      result = arrdivisors2[j];
+      break;
     }
   }
+  return result;
 };
 
 const generateRound = () => {
   const num1 = helpers.generateRandomNumber(1, 100);
   const num2 = helpers.generateRandomNumber(1, 100);
-  const arrdivisors1 = finedDivisorsNumber(num1);
-  const arrdivisors2 = finedDivisorsNumber(num2);
-  const intersectionNumbers = finedIntersectionArr(arrdivisors1, arrdivisors2);
+  const intersectionNumbers = gcd(num1, num2);
   const qustion = `${num1} ${num2}`;
-  const res = String(intersectionNumbers);
-  return [qustion, res];
+  const answer = String(intersectionNumbers);
+  return [qustion, answer];
 };
 const description = 'Find the greatest common divisor of given numbers.';
 
-const engine = { description, generateRound };
-const startGame = () => platform(engine);
-export default startGame;
+export default () => startGame({ description, generateRound });
