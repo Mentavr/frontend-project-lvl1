@@ -17,7 +17,7 @@ const calculate = (num1, num2, operation) => {
 export const operations = ['+', '-', '*'];
 
 const generateRound = () => {
-  const operationIndex = helpers.generateRandomNumber(operations[0], operations.length - 1);
+  const operationIndex = helpers.generateRandomNumber(0, operations.length - 1);
   const operation = operations[operationIndex];
   const num1 = helpers.generateRandomNumber(-10, 10);
   const num2 = helpers.generateRandomNumber(-10, 10);
