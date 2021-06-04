@@ -13,9 +13,6 @@ const isPrime = (number) => {
 const generateRound = () => {
   const num = helpers.generateRandomNumber(1, 100);
   const isSimpleNum = (isPrime(num) === true ? 'yes' : 'no');
-  console.log(isPrime(num));
-  console.log(isSimpleNum);
-  console.log(num);
   const qustion = num.toString();
   const answer = isSimpleNum;
   return [qustion, answer];
