@@ -12,9 +12,8 @@ const isPrime = (number) => {
 
 const generateRound = () => {
   const num = helpers.generateRandomNumber(1, 100);
-  const isSimpleNum = (isPrime(num) === true ? 'yes' : 'no');
   const qustion = num.toString();
-  const answer = isSimpleNum;
+  const answer = isPrime(num) === true ? 'yes' : 'no';
   return [qustion, answer];
 };
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
